@@ -49,14 +49,25 @@ $$    $$/ $$    $$ |/     $$/ $$ |$$ |  $$ |$$    $$/
             if (Input == "1")
             {
                 Console.WriteLine("blackjack");
-               
+                class1.gameMechanic();
+                Console.ReadKey();
 
             }
             else
             {
                 Console.WriteLine("nope");
+                Console.ReadKey();
             }
 
+
+
+        }
+
+
+
+        private static void gameMehanic()
+        {
+            Console.WriteLine("test");
 
 
         }

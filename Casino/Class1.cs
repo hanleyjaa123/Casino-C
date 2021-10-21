@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Casino
 {
-    class Class1
+   public class Class1
     {
 
         public void gameMechanic()
         {
-
+            Console.WriteLine("test002");
 
 
         }
