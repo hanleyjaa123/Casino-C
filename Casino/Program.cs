@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Casino
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static public void Main(string[] args)
         {
             string mainTitle = @"
 
@@ -37,28 +37,38 @@ $$    $$/ $$    $$ |/     $$/ $$ |$$ |  $$ |$$    $$/
             Console.WriteLine(mainTitle);
             Console.WriteLine("Click the any key to continue");
             Console.ReadKey();
+            playerChoice();
+
+
+
+            
+        }
+
+        static void playerChoice()
+        {
             Console.Clear();
+            blackjackGame class1 = new blackjackGame();
 
+            int userInput = -1;
 
-
-            Console.WriteLine("What game would you like to play?");
-            Console.WriteLine("1. Blackjack");
-           string Input = Console.ReadLine();
-            Class1 class1 = new Class1();
-
-            if (Input == "1")
+            while (userInput == -1)
             {
-                Console.WriteLine("blackjack");
-                class1.gameMechanic();
-                Console.ReadKey();
+                Console.WriteLine("What game would you like to play?");
+                Console.WriteLine("1. Blackjack");
+                userInput = Convert.ToInt32(Console.ReadLine());
+                if (userInput != 1)
+                {
+                    Console.Clear();
+                    userInput = -1;
+                }
+                else if (userInput == 1)
+                {
+                    class1.playBlackJack();
+                }
 
             }
-            else
-            {
-                Console.WriteLine("nope");
-                Console.ReadKey();
-                
-            }
+            
+            Console.ReadKey();
 
 
 
