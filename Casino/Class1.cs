@@ -14,24 +14,62 @@ namespace Casino
 
         public void gameMechanic()
         {
+            
+            Console.Clear();
             Random random = new Random();
-            for (int i = 0; i < 15; i++)
+            int num01 = random.Next(1, 11);
+            int num02 = random.Next(1, 11);
+            int handTotal = num01 + num02;
+
+            /* for (int i = 0; i < 2; i++)
+             {
+                 randomCard(random);
+             }*/
+            Console.WriteLine("your hand is, " + handTotal);
+            Console.WriteLine(" ");
+            Console.WriteLine("1. Stand ");
+            Console.WriteLine("2. Hit");
+
+            string input = Console.ReadLine();
+
+            if (input == "1")
             {
-                Console.WriteLine(random.Next(1, 10));
+                if (handTotal > 21)
+                {
+                    Console.WriteLine("you busted!");
+                }
+                else if (handTotal == 21)
+                {
+                    Console.WriteLine("Blackjack!");
+                }
+                else if (handTotal < 21)
+                {
+                    Console.WriteLine("Good luck dealers hand is:");
+                    int dealerHand = random.Next(1, 11);
+                    Console.WriteLine(dealerHand + random.Next(1, 11));
+                }
+            }
+            else if (input == "2")
+            {
+               int newTotal = handTotal + random.Next(1, 11);
+                Console.WriteLine("your new total is " + newTotal);
             }
 
-            Console.ReadKey();
-
-
+            
 
         }
 
-
-         static void gameCards(int number)
+        private void randomCard(Random random)
         {
-            List<int> playCards = new List<int>() { 1, 2, 5, 7, 8, 10 };
+            Console.WriteLine(random.Next(1, 11));
+
 
         }
+
+
+
+
+
 
 
 

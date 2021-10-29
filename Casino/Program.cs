@@ -66,11 +66,5 @@ $$    $$/ $$    $$ |/     $$/ $$ |$$ |  $$ |$$    $$/
 
 
 
-        private static void gameMehanic()
-        {
-            Console.WriteLine("test");
-
-
-        }
     }
 }
