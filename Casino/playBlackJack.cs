@@ -21,9 +21,11 @@ namespace Casino
             int num02 = random.Next(1, 11);
             int handTotal = num01 + num02;
 
+
             while (handTotal < 21)
             {
                 Console.Clear();
+
                 Console.WriteLine("your hand is: " + handTotal);
                 Console.WriteLine("what would you like to do?");
                 Console.WriteLine("1. Hit");
@@ -33,7 +35,12 @@ namespace Casino
                 if (playerInput == 1)
                 {
                     handTotal = handTotal + random.Next(1, 11);
-                    playerInput = 2;
+                    if (handTotal > 21)
+                    {
+                        Console.WriteLine("you busted! your total was: " + handTotal);
+                        Console.ReadKey();
+                        playBlackJack();
+                    }
 
 
 
@@ -41,6 +48,7 @@ namespace Casino
                 }
                 else if (playerInput == 2)
                 {
+                    Console.Clear();
                     Console.WriteLine("your total is: " + handTotal);
                     int d01 = random.Next(1, 11);
                     int d02 = random.Next(1, 11);
@@ -70,12 +78,7 @@ namespace Casino
                         playBlackJack();
 
                     }
-                    else if (handTotal > 21)
-                    {
-                        Console.WriteLine("you busted!");
-                        Console.ReadKey();
-                        playBlackJack();
-                    }
+
 
 
                     
