@@ -57,6 +57,12 @@ namespace Casino
                     int d01 = random.Next(1, 11);
                     int d02 = random.Next(1, 11);
                     int dealerTotal = d01 + d02;
+                    while (dealerTotal < 17)
+                    {
+                        int d03 = random.Next(1, 11);
+                        dealerTotal = dealerTotal + d03;
+
+                    }
 
 
 
