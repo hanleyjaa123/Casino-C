@@ -22,7 +22,7 @@ namespace Casino
             int num02 = random.Next(1, 11);
             int handTotal = num01 + num02; // takes the two random numbers previously generated, and adds them for a total.
 
-            Console.WriteLine(num01);
+            Console.WriteLine(num01);   
             while (handTotal < 21) 
             {  // while --> handTotal is less than 21, read code below.
                 Console.Clear(); 
@@ -49,7 +49,7 @@ namespace Casino
 
 
                 }
-                else if (playerInput == 2)
+                else if (playerInput == 2) // [STAND COMMAND]
                 {
                     Console.Clear();
                     Console.WriteLine("your total is: " + handTotal);
