@@ -52,7 +52,7 @@ namespace Casino
 
 
 
-        public void menuCheck(int playerInput, int handTotal)
+        public void menuCheck(int playerInput, int handTotal, int firstCard) // playerInput is for players choice within the menu(hit,stand,menu) handTotal is players total, firstCard is the dealers first randomly gen card number( in blackjack the player can see first card of dealers)
         {
             blackjackGame sendBack = new blackjackGame();
             Program mainScreen = new Program();
@@ -67,13 +67,14 @@ namespace Casino
             else if (playerInput == 2)
             {
 
-                sendBack.standCommand(handTotal);
+                 sendBack.standCommand(handTotal, firstCard);
 
             }
             else if (playerInput == 3)
             {
                 Console.Clear();
-                // mainScreen.playerChoice();
+                mainScreen.loadMain();
+
 
             }
 

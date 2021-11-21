@@ -45,6 +45,13 @@ $$    $$/ $$    $$ |/     $$/ $$ |$$ |  $$ |$$    $$/
             
         }
 
+        public void loadMain()
+        {
+
+            playerChoice();
+
+        }
+
         public static void playerChoice()
         {
             Console.Clear();
