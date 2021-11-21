@@ -14,19 +14,25 @@ namespace Casino
 
         public void playBlackJack()
         {
+
+
             
-            Console.Clear();
+            
             Random random = new Random();
-            // creates a varible thats equals a random number generator 1-10 
+            BlackjackLogic logic = new BlackjackLogic();
+            // creates a variable thats equals a random number generator 1-10 
             int num01 = random.Next(1, 11);
             int num02 = random.Next(1, 11);
+            int dealer01 = random.Next(1, 11);
             int handTotal = num01 + num02; // takes the two random numbers previously generated, and adds them for a total.
 
             Console.WriteLine(num01);   
             while (handTotal < 21) 
             {  // while --> handTotal is less than 21, read code below.
-                Console.Clear(); 
+                Console.Clear();
 
+                Console.WriteLine("Dealers first card: " + dealer01);
+                Console.WriteLine("");
                 Console.WriteLine("your hand is: " + handTotal);
                 Console.WriteLine("what would you like to do?");
                 Console.WriteLine("1. Hit");
@@ -34,7 +40,7 @@ namespace Casino
                 Console.WriteLine("3. Return to menu");
                int playerInput = Convert.ToInt32(Console.ReadLine());
 
-                if (playerInput == 1) // if statments, checking players input. if anything except a int is inputed, the application will brake. 
+                if (playerInput == 1) // if statements, checking players input. if anything except a int is inputed, the application will brake. 
                 {
                     // [HIT COMMAND] takes the handTotal, and sets it equal to handTotal + a random number 1-10
                     handTotal = handTotal + random.Next(1, 11); 
@@ -54,6 +60,7 @@ namespace Casino
                     Console.Clear();
                     Console.WriteLine("your total is: " + handTotal);
                     // there is 100% a better way to do this, just gotta figure out how. When the player stands, it will then generate the dealers hand, and get dealers total.
+
                     int d01 = random.Next(1, 11);
                     int d02 = random.Next(1, 11);
                     int dealerTotal = d01 + d02;
@@ -65,30 +72,10 @@ namespace Casino
                     }
 
 
-
-
                     Console.WriteLine("the dealers total is: " + dealerTotal); // after generating the dealers hand, it will be displayed for the user.
 
-                    if (handTotal > dealerTotal) // logic checks, seeing which hand between the two won. 
-                    {
-                        Console.WriteLine("you won");
-                        Console.ReadKey();
-                        playBlackJack();
-
-                    }
-                    else if (handTotal == dealerTotal)
-                    {
-                        Console.WriteLine("Push, same totals");
-                        Console.ReadKey();
-                        playBlackJack();
-                    }
-                    else if (handTotal < dealerTotal)
-                    {
-                        Console.WriteLine("dealer won");
-                        Console.ReadKey();
-                        playBlackJack();
-
-                    }
+                    logic.playerHandCheck(handTotal, dealerTotal);
+                    
 
 
 
@@ -106,21 +93,6 @@ namespace Casino
 
 
         }
-
-        private void getNumber(Random random)
-        {
-
-            random.Next(1, 11);
-
-        }
-
-
-
-
-
-
-
-
 
 
 

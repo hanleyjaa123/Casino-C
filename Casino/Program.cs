@@ -63,6 +63,7 @@ $$    $$/ $$    $$ |/     $$/ $$ |$$ |  $$ |$$    $$/
                 }
                 else if (userInput == 1)
                 {
+                    Console.Clear();
                     class1.playBlackJack();
                 }
 
