@@ -40,7 +40,7 @@ namespace Casino
                 Console.WriteLine("2. Stand");
                 Console.WriteLine("3. Return to menu");
                int playerInput = Convert.ToInt32(Console.ReadLine());
-                logic.menuCheck(playerInput, handTotal, d01);
+                logic.menuCheck(playerInput, handTotal);
 
 
                 if (playerInput == 1) // if statements, checking players input. if anything except a int is inputed, the application will brake. 
@@ -89,11 +89,11 @@ namespace Casino
                 playBlackJack();
             }
 
-            logic.menuCheck(handTotal);
+            // logic.menuCheck(handTotal);
 
         }
 
-        public void standCommand(int handTotal, int d01)
+        public void standCommand(int handTotal)
         {
             BlackjackLogic logic = new BlackjackLogic();
             Random random = new Random();

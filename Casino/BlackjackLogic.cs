@@ -52,7 +52,7 @@ namespace Casino
 
 
 
-        public void menuCheck(int playerInput, int handTotal, int d01)
+        public void menuCheck(int playerInput, int handTotal)
         {
             blackjackGame sendBack = new blackjackGame();
             Program mainScreen = new Program();
@@ -67,7 +67,7 @@ namespace Casino
             else if (playerInput == 2)
             {
 
-                sendBack.standCommand(handTotal, d01);
+                sendBack.standCommand(handTotal);
 
             }
             else if (playerInput == 3)
