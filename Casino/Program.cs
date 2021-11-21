@@ -11,6 +11,7 @@ namespace Casino
     {
         static public void Main(string[] args)
         {
+            
             string mainTitle = @"
 
 
@@ -44,7 +45,7 @@ $$    $$/ $$    $$ |/     $$/ $$ |$$ |  $$ |$$    $$/
             
         }
 
-        static void playerChoice()
+        public static void playerChoice()
         {
             Console.Clear();
             blackjackGame class1 = new blackjackGame();
