@@ -12,15 +12,11 @@ namespace Casino
 
         Random random = new Random();
         BlackjackLogic logic = new BlackjackLogic();
+        
 
         public void playBlackJack()
         {
             
-
-            
-            
-          
-
             int num01 = random.Next(1, 11);
             int num02 = random.Next(1, 11);
             int d01 = random.Next(1, 11); // creates dealers first card
@@ -40,6 +36,7 @@ namespace Casino
                 Console.WriteLine("2. Stand");
                 Console.WriteLine("3. Return to menu");
                int playerInput = Convert.ToInt32(Console.ReadLine());
+
                 logic.menuCheck(playerInput, handTotal, d01);
 
 
@@ -77,7 +74,6 @@ namespace Casino
 
         public void hitCommand(int handTotal)
         {
-
             // [HIT COMMAND] takes the handTotal, and sets it equal to handTotal + a random number 1-10
             handTotal = handTotal + random.Next(1, 11);
             if (handTotal > 21) // checks to see if the handTotal went over 21, if true code below is ran.
@@ -85,15 +81,16 @@ namespace Casino
                 Console.WriteLine("you busted! your total was: " + handTotal);
                 Console.ReadKey();
                 playBlackJack();
-            } 
+            }
 
-            // logic.menuCheck(handTotal); <--- can't figure a way to update the handTotal after adding the the random.Next
+
+            // logic.menuCheck(handTotal); <--- can't figure a way to update the handTotal after adding the the random.Next | it requires 3 pass playerInput,handTotal,firstCard
 
         }
 
              public void standCommand(int handTotal, int firstCard)
              {
-
+                
                  Console.Clear();
                  Console.WriteLine("your total is: " + handTotal);
                  // there is 100% a better way to do this, just gotta figure out how. When the player stands, it will then generate the dealers hand, and get dealers total.
