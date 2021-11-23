@@ -53,15 +53,15 @@ namespace Casino
 
 
 
-        public void menuCheck(int playerInput, int handTotal, int firstCard) // playerInput is for players choice within the menu(hit,stand,menu) handTotal is players total, firstCard is the dealers first randomly gen card number( in blackjack the player can see first card of dealers)
+        public void menuCheck(int playerInput, int handTotal, int firstCard) // playerInput is for players choice within the menu(hit,stand,menu) handTotal is players total, firstCard is the dealers first randomly gen card number( in blackjack the player can see first card of dealer)
         {
             
             Program mainScreen = new Program();
             
-            if (playerInput == 1) // if statements, checking players input. if anything except a int is inputed, the application will brake. 
+            if (playerInput == 1) // if statements, checking players input. 
             {
 
-                sendBack.hitCommand(handTotal);
+                sendBack.hitCommand(handTotal); // 
                 
 
             }
