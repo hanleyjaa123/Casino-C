@@ -40,7 +40,7 @@ namespace Casino
                 logic.menuCheck(playerInput, handTotal, d01);
 
 
-                if (playerInput == 1) // if statements, checking players input. if anything except a int is inputed, the application will brake. 
+           /*     if (playerInput == 1) // if statements, checking players input. if anything except a int is inputed, the application will brake. 
                 {
 
 
@@ -64,7 +64,7 @@ namespace Casino
                     
 
 
-                }
+                }*/
 
             } 
 
@@ -82,7 +82,7 @@ namespace Casino
                 Console.ReadKey();
                 playBlackJack();
             }
-
+             
 
             // logic.menuCheck(handTotal); <--- can't figure a way to update the handTotal after adding the the random.Next | it requires 3 pass playerInput,handTotal,firstCard
 

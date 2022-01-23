@@ -12,14 +12,14 @@ namespace Casino
     {
 
 
-        Random random = new Random();
-        blackjackGame sendBack = new blackjackGame();
+        
+        
 
         public void playerHandCheck(int handTotal, int dealerTotal) // right here it takes the inputs in and apply s it to the logic below
         {
-// unused at the moment         Random random = new Random();
-            
-
+            // unused at the moment         Random random = new Random();
+            Random random = new Random();
+            blackjackGame sendBack = new blackjackGame();
 
             if (dealerTotal > 21)
             {
@@ -57,7 +57,8 @@ namespace Casino
         {
             
             Program mainScreen = new Program();
-            
+            blackjackGame sendBack = new blackjackGame();
+
             if (playerInput == 1) // if statements, checking players input. 
             {
 
